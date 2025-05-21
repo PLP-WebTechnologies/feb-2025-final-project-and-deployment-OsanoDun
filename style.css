@@ -1,0 +1,113 @@
+/* style.css */
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease; /* Smooth background transition for potential dark mode */
+}
+
+/* Basic styling for active nav link */
+.nav-link.active {
+    font-weight: 600;
+    color: #3b82f6; /* Tailwind's blue-500 */
+}
+.nav-link:hover {
+    color: #2563eb; /* Tailwind's blue-600 */
+}
+
+/* Image Slider Styles */
+.slider-container {
+    position: relative;
+    overflow: hidden; /* Ensures images don't spill out */
+    border-radius: 0.5rem; /* Rounded corners */
+}
+.slide {
+    display: none; /* Hidden by default */
+    width: 100%;
+    height: 100%; /* Ensure slide fills container */
+    object-fit: cover; /* Cover the area without distortion */
+    transition: opacity 1s ease-in-out;
+}
+.slide.active {
+    display: block; /* Show active slide */
+    opacity: 1;
+}
+.slide:not(.active) {
+    opacity: 0;
+}
+
+/* Hamburger Menu for Mobile */
+.mobile-menu {
+    display: none; /* Hidden by default */
+}
+.mobile-menu.open {
+    display: block; /* Show when open */
+}
+
+/* Form validation error styling */
+.form-input.error {
+    border-color: #ef4444; /* Tailwind's red-500 */
+}
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem; /* text-sm */
+    min-height: 1.25rem; /* Ensure space for error message to prevent layout shifts */
+}
+
+/* Custom Message Box for alerts/confirmations */
+.custom-message-box-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.custom-message-box-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.custom-message-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+.custom-message-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.25rem;
+}
+.custom-message-box p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.custom-message-box button {
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+}
+.custom-message-box button:active {
+    transform: scale(0.98);
+}
+.custom-message-ok-button {
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+}
+.custom-message-ok-button:hover {
+    background-color: #2563eb; /* blue-600 */
+}

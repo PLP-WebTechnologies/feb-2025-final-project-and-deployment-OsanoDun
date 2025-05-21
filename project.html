@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThinkTank Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" data-page="home" class="text-3xl font-bold text-blue-600 site-link">
+                    ThinkTank
+                </a>
+
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" data-page="home" class="nav-link text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out active">Home</a>
+                    <a href="#" data-page="about" class="nav-link text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out">About</a>
+                    <a href="#" data-page="blog" class="nav-link text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out">Blog</a>
+                    <a href="#" data-page="contact" class="nav-link text-gray-600 hover:text-blue-600 transition duration-150 ease-in-out">Contact</a>
+                </nav>
+
+                <div class="md:hidden">
+                    <button id="mobileMenuButton" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu md:hidden bg-white shadow-lg py-2">
+            <a href="#" data-page="home" class="block nav-link text-gray-600 hover:bg-blue-50 px-4 py-3 transition duration-150 ease-in-out active">Home</a>
+            <a href="#" data-page="about" class="block nav-link text-gray-600 hover:bg-blue-50 px-4 py-3 transition duration-150 ease-in-out">About</a>
+            <a href="#" data-page="blog" class="block nav-link text-gray-600 hover:bg-blue-50 px-4 py-3 transition duration-150 ease-in-out">Blog</a>
+            <a href="#" data-page="contact" class="block nav-link text-gray-600 hover:bg-blue-50 px-4 py-3 transition duration-150 ease-in-out">Contact</a>
+        </div>
+    </header>
+
+    <main id="mainContent" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-10 mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="currentYear"></span> ThinkTank. All rights reserved.</p>
+            <p class="text-sm mt-1">Crafted with <span class="text-red-500">&hearts;</span> for Practice.</p>
+        </div>
+    </footer>
+
+    <div id="customMessageBoxOverlay" class="custom-message-box-overlay">
+        <div class="custom-message-box">
+            <h3 id="customMessageTitle">Notification</h3>
+            <p id="customMessageText"></p>
+            <button id="customMessageOkButton" class="custom-message-ok-button">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
